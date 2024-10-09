@@ -1,0 +1,67 @@
+﻿<Window x:Class="WpfItemControlListBoxApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:WpfItemControlListBoxApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!--<ListBox x:Name="list"
+                 FontSize="30">
+            <ListBoxItem>
+                Bobby
+            </ListBoxItem>
+            <sys:String>Jonny</sys:String>
+            <sys:String>Tommy</sys:String>
+        </ListBox>-->
+
+        <ListBox x:Name="listEmployees"
+                 FontSize="30"
+                 DisplayMemberPath="Name"
+                 SelectionMode="Extended">
+            <!--<local:Employee Name="Bobby" Age="26" />
+            <local:Employee Name="Sammy" Age="19" />
+            <local:Employee Name="Timmy" Age="34" />-->
+
+            <ListViewItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/flag_angola_enl.jpg" />
+                    <TextBlock Text="Angola"/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/flag_argentina_enl.jpg" />
+                    <TextBlock Text="Argentina"/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/flag_avstriya_enl.jpg" />
+                    <TextBlock Text="Austria"/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/flag_england1.jpg" />
+                    <TextBlock Text="England"/>
+                </StackPanel>
+            </ListViewItem>
+        </ListBox>
+
+        <StackPanel Grid.Column="1">
+            <TextBox x:Name="txtName" FontSize="30"/>
+            <TextBox x:Name="txtAge" FontSize="30"/>
+            <Button Content="Add Employee" FontSize="30" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
